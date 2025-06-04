@@ -20,8 +20,11 @@
 
 function print(value) {
   // YOUR CODE BELOW HERE //
+  function print(value){
+    let result = value
+    console.log(result)
+  }
   
-console.log(print['value']):
   
   // YOUR CODE ABOVE HERE //
 }
