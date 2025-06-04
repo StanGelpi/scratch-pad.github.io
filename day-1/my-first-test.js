@@ -21,7 +21,7 @@
 function print(value) {
   // YOUR CODE BELOW HERE //
   
-
+console.log(print['value']):
   
   // YOUR CODE ABOVE HERE //
 }
