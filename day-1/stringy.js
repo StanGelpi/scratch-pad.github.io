@@ -18,9 +18,8 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    //write lngth of string to console
-console.log(string.length);
-
+      //write lngth of string to console
+return string.length;
 
     
     // YOUR CODE ABOVE HERE //
@@ -39,10 +38,11 @@ console.log(string.length);
 function toLowerCase(string) {
 
     // YOUR CODE BELOW HERE //
-   //create new string and assign converted values
-   var newString = toLowerCase(string);
-   //return results
-   return newString
+  //create new string and assign converted values
+  var newString = string.toLowerCase();
+  //return results
+  return newString
+
 
 
 
@@ -59,7 +59,7 @@ function toLowerCase(string) {
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 // create new string and assign converted values
-var caps = toUpperCase(string);
+var caps = string.toUpperCase();
 //return results
 return caps
 
@@ -86,12 +86,16 @@ return caps
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    //create new string and assign converted values
-var withDash = string.replace(" ", "-")
-//return new string
-return withDash
-
-
+    /create new string to seperate the values of string
+    var apart = string.split(" ")
+    //create new string to join valus with dash
+    var joined = apart.join('-')
+    //force new string to lower case
+    var result = joined.toLowerCase()
+    //return new string
+    return result
+    
+    
     // YOUR CODE ABOVE HERE //
 }
 
@@ -114,12 +118,15 @@ return withDash
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+/    //remove case sensitivity
+let newStr = string.toLowerCase()
+let newChar = char.toLowerCase()
 //set up if statement to see if character starts string
-if (string[0] == char) {
-    return true
+if (newStr[0] === newChar) {
+return true
 } // set up else staement
 else {
-    return false
+return false
 }
 }
     
@@ -145,12 +152,15 @@ else {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
+//create new variables to eliminate case sensitivity
+let newStr = string.toLowerCase()
+let newChar = char.toLowerCase()
 //use if statement to see if string ends with character
-if (string.length - 1 == char) {
-    return true
-    //set up else statement
+if (newStr[newStr.length - 1] == newChar) {
+return true
+//set up else statement
 } else {
-    return false
+return false
 }
 
     // YOUR CODE ABOVE HERE //
@@ -168,9 +178,10 @@ if (string.length - 1 == char) {
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 // concatenate the two strings
- var result = stringOne.concat(stringTwo)
- // return result
- return result
+var result = stringOne.concat(stringTwo)
+// return result
+return result
+
 
 
     // YOUR CODE ABOVE HERE //
@@ -192,11 +203,9 @@ function concat(stringOne, stringTwo) {
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    //set up args array
-    var args = Array.from(arguments);
-    arguements.concat(...strings: string[])
-
-
+  //place strings into array
+  var args = Array.from(arguments)
+  return args.join('')
     // YOUR CODE ABOVE HERE //
 }
 
@@ -215,12 +224,12 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-if (stringOne.length > stringTwo.length){
-    return stringOne
-} else {
-    return stringTwo
-}
-
+    if (stringOne.length > stringTwo.length){
+        return stringOne
+    } else {
+        return stringTwo
+    }
+    
 
     // YOUR CODE ABOVE HERE //
 }
@@ -238,6 +247,18 @@ if (stringOne.length > stringTwo.length){
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+     //compare alphabetical values
+     stringOne.localeCompare(stringTwo)
+     //Plus one if greater than
+     if (stringOne > stringTwo){
+         return -1
+     //-1 if less than
+     } else if (stringOne < stringTwo) {
+         return 1
+     // return 0 if equal
+     } else if (stringOne === stringTwo) {
+         return 0
+     }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -256,6 +277,16 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    //Compare alphabetical values of strings
+    stringOne.localeCompare(stringTwo)
+    // if statements to determine actions
+    if (stringOne < stringTwo) {
+        return -1
+    } else if (stringOne > stringTwo) {
+        return 1
+    } else if (stringOne === stringTwo){
+        return 0
+    }
 
 
 
