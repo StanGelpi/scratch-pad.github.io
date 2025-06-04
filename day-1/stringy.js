@@ -86,7 +86,7 @@ return caps
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    /create new string to seperate the values of string
+    //create new string to seperate the values of string
     var apart = string.split(" ")
     //create new string to join valus with dash
     var joined = apart.join('-')
@@ -118,7 +118,7 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-/    //remove case sensitivity
+    //remove case sensitivity
 let newStr = string.toLowerCase()
 let newChar = char.toLowerCase()
 //set up if statement to see if character starts string

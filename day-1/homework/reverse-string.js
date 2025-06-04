@@ -17,30 +17,31 @@
  *     when to stop looping?
  *  c. how do you access individual characters of a String?
  *  d. how do you concatenate Strings? What operator do we use?
- */
+/*
 I: String to be reversed
 O: Reversed string to be returned
 C: hints suggest Split, Join and Loop
-E:
+E*/
+
 //Set up function
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-  //Set up holding area for new data
-   let revStr = "";
-  //Spilt input int individual elements
-    input.split()
-  // set up loop parameters to process input
-    for (var i = input.length - 1; i >= 0; i--) {
-      //set up count
-      revStr += input[i];
-      //return results joined together as individual string
-      return revStr.join();
-    }
-      console.log(reverseString("hello"))
-}
-    
+    //Set up holding area for new data
+    let revStr = "";
+ 
+   // set up loop parameters to process input
+     for (var i = input.length - 1; i >= 0; i--) {
+       //set up count & return results
+     revStr += input[i];
+        console.log(revStr)
+     } // return the results
+    return revStr 
+       
+ }  
+    console.log(reverseString("hello"))
+ 
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 
