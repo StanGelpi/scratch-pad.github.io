@@ -4,6 +4,8 @@
 
 /**
  * IN CLASS EXERCISE: LOOPS
+ * I: extracting values from an array
+ * O: Printing those values using consol.log
  */
 
 /** 
@@ -12,8 +14,10 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
+  // set up loop
   for ( var i = 0; i <= array.length; i++) {
-    
+    //print the values
+    console.log(array[i])
   }
   
   
@@ -24,10 +28,15 @@ function printArrayValues(array) {
 /** 
  * Given an input Array, loop backwards over the Array and print its values 
  * using console.log().
+ * 
+ * I: Extracting values from an array in reverse order
+ * O: Printing the values using console.log
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+  // set up loop for reverse intake
+  for (var i = array.length - 1; i >= 0; i--)
+  console.log(array[i])
   
   
   
@@ -39,8 +48,11 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-
+  let newArr = []
+ for (var key in object) {
+ newArr.push(key)
+ console.log(newArr)
+  } return newArr
   // YOUR CODE ABOVE HERE //
 }
 
