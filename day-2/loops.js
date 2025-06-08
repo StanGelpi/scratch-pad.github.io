@@ -122,8 +122,15 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //create cout variable
+  var count = 0
+  // set up loop for count iterations
+  for (var key in object) {
+    // code count  aparatus
+    count++;
+  }
+  //return value
+  return count
   
   
   // YOUR CODE ABOVE HERE //
@@ -132,12 +139,32 @@ function getObjectLength(object) {
 /** 
  * Given an input Object, how might we loop over the Object IN REVERSE and 
  * print its values using console.log()?
+ *
+ * I: Iterate over an object and get its values
+ * O: Put the results into a new array and print the results in reverse order
+ * C; 
+ * E
  */
+
+
+ 
+  
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   
-  console.log(object)
-  
+
+  function printObjectValuesInReverse(object) {
+    //setup a variable to house the keys
+  var newArr = []  
+      //Add a for loop to iterarate and find the values
+   for (var key in object){
+      //then push the results into new array
+     newArr.unshift(object[key]);
+    
+   }
+   console.log(newArr)
+   }      
+   
   
   // YOUR CODE ABOVE HERE //
 }

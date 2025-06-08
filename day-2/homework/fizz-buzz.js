@@ -13,8 +13,20 @@
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
 
-
-
+    //set up a loop for  counting 
+    for (var z = 0; z <= 100; i++) {
+    //add conditional statements and log
+     if (z % 3 === 0 && z % 5 === 0) {
+        console.log("FizzBuzz");
+      } else if (z % 3 === 0) {
+          console.log("Fizz");
+      } else if (z % 5 === 0) {
+          console.log("Buzz");
+      } else {
+          console.log(z);
+   }
+   }
+  }
     // YOUR CODE GOES ABOVE HERE //
 }
 
