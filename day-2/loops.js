@@ -153,21 +153,22 @@ function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   
 
-  function printObjectValuesInReverse(object) {
-    //setup a variable to house the keys
-  var newArr = []  
-      //Add a for loop to iterarate and find the values
-   for (var key in object){
-      //then push the results into new array
-     newArr.unshift(object[key]);
     
-   }
-   console.log(newArr)
-   }      
-   
+ 
+    //setup a variable to house the keys
+    var newArr = []  
+    //Add a for loop to iterarate and find the values
+ for (var key in object){
+    //then push the results into new array
+   newArr.unshift(object[key]);
+ }
+  for (var i = 0; i <= newArr.length - 1;  i++){
+ console.log(newArr[i])
+  }
+ }      
   
   // YOUR CODE ABOVE HERE //
-}
+
 
 
 

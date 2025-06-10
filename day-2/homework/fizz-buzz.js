@@ -14,7 +14,7 @@ function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
 
     //set up a loop for  counting 
-    for (var z = 0; z <= 100; i++) {
+    for (var z = 1; z <= 100; z++) {
     //add conditional statements and log
      if (z % 3 === 0 && z % 5 === 0) {
         console.log("FizzBuzz");
