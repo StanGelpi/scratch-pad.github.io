@@ -11,9 +11,17 @@
  * return a Function that tests whether a given value is greater than the 
  * base.
  */
+
+    
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
+    // set up new function 
+    function compare(a, b) {
+        return a > b
+        }  
+    
+      return createGreaterThanFilter(compare())
    
     
     // YOUR CODE ABOVE HERE //
@@ -75,7 +83,8 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    //set up collection plate
+    var newStr = []
     
     
     
@@ -97,7 +106,7 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
+    var newStr = (boolean)
     
     
     // YOUR CODE ABOVE HERE //

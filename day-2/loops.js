@@ -101,7 +101,7 @@ function printObjectValues(object) {
   for (var key in object) {
     console.log(object[key])
     }
-    }
+  }
    
      
  

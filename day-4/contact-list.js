@@ -35,7 +35,11 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    return contact {
+        contact.id = id
+        contact.nameFirst = nameFirst
+        contact.nameLast = nameLast
+    }
 } 
 
 
