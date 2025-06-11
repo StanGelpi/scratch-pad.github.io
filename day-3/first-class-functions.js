@@ -17,11 +17,14 @@ function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
     // set up new function 
-    function compare(a, b) {
-        return a > b
-        }  
-    
-      return createGreaterThanFilter(compare())
+    return function compare(a) {
+          if (a > base){
+            return true
+          }  else {
+            return false
+          }
+    }
+      
    
     
     // YOUR CODE ABOVE HERE //
@@ -35,7 +38,13 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function lessThan(a) {
+        if (a < base) {
+            return true
+        } else {
+            return false
+        }
+    }
   
     
     
@@ -52,7 +61,14 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
-    
+    return function begin(string) {
+        if (string[0].startsWith(startsWith[0]) {
+            return true
+        } else {
+            return false
+        }
+
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -67,10 +83,13 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+      
+    function final(string) 
+    if (string.charAt(string.length - 1) === endswith) {
+            return true
+        } else {
+            return false
+        }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -85,9 +104,10 @@ function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     //set up collection plate
     var newStr = []
+    function change(newStr) 
+      
     
-    
-    
+    return newStr
     // YOUR CODE ABOVE HERE //
 }
 
@@ -106,8 +126,16 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    var newStr = (boolean)
-    
+    var newStr = []
+    function boolean (){
+        for (var i = 0; i <= test.length - 1; i++)
+        if (strings[i] === test) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     
     // YOUR CODE ABOVE HERE //
 }

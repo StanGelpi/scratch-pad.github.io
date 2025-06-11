@@ -16,9 +16,11 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    if (Array.isArray[value])
-    return true
-    
+    if (Array.isArray(value)) {
+        return true
+    }  else {
+        return false
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -39,13 +41,14 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    //unse instance of to dtermine if value is an object
-    if (value instanceof isObject) {
-    return true;
-    } else {
-        return false
-    }
-
+    //use instance of to determine if object is intended as a collection
+    if (value instanceof Object) {
+        return true;
+        } else if (Array.isArray(value)){            
+            return false
+        }
+    
+    
     
     
     
@@ -62,7 +65,7 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    if (value instanceof isObject|| isCollection.isArray[value]) {
+    if (value instanceof isObject || isCollection.isArray[value]) {
         return true;
         } else {
             return false
@@ -95,14 +98,16 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    if (value.typeof === true) {
-        return value.typeof
-    } else if 
+   // if (value.typeof === true) {
+   //     return value.typeof
+  //  } else if () {
+
+    }
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
