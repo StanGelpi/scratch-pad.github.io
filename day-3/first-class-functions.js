@@ -55,22 +55,20 @@ function createLessThanFilter(base) {
  * Given a startsWith character, which will be a single character, return a 
  * Function that tests whether a given String starts with the startsWith 
  * character.
- * 
+ * I: 
  * This function needs to be case insensitive.
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    return function begin(string) {
-        if (string[0].startsWith(startsWith[0]) {
-            return true
-        } else {
-            return false
-        }
+     // initiate variable and make case insensitive
+     var string = string.toUpperCase();
+         startsWith = startsWith.toUpperCase();
+ // create a function to compare startsWith & string
+ return function compare(string, startsWith) {     
+     return (string.startsWith() === startesWith) 
+ }     
+   
 
-    }
-    
-    
     // YOUR CODE ABOVE HERE //
 }
 
@@ -84,7 +82,7 @@ function createStartsWithFilter(startsWith) {
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
       
-    function final(string) 
+   // function final(string) 
     if (string.charAt(string.length - 1) === endswith) {
             return true
         } else {
@@ -102,12 +100,12 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    //set up collection plate
-    var newStr = []
-    function change(newStr) 
-      
-    
-    return newStr
+      //set up a for loop for iteration
+  for (let i = 0; i < strings.length; i++){
+    // function change(newStr) 
+      strings[i] = modify(strings[i]); 
+   }
+     return strings
     // YOUR CODE ABOVE HERE //
 }
 
@@ -125,17 +123,14 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    var newStr = []
-    function boolean (){
-        for (var i = 0; i <= test.length - 1; i++)
-        if (strings[i] === test) {
+    //setup a for loop to iterate over the array
+        for (var i = 0; i < strings.length; i++) {
+        if (strings[i] = test(strings[i])) {
             return true
         } else {
             return false
         }
     }
-
     
     // YOUR CODE ABOVE HERE //
 }

@@ -42,15 +42,21 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     //use instance of to determine if object is intended as a collection
-    if (value instanceof Object) {
-        return true;
-        } else if (Array.isArray(value)){            
-            return false
-        }
-    
-    
-    
-    
+    if (typeof value === 'string'){
+        return false;
+    } else if (typeof value === "number"){
+      return false;
+    } else if (typeof value === "boolean"){
+      return false;
+    } else if (Array.isArray(value)) {
+      return false;
+    } else if (value === null) {
+      return false;
+    } else if (value instanceof Date){
+      return false;
+    } else {
+      return true
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -65,15 +71,21 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    if (value instanceof isObject || isCollection.isArray[value]) {
-        return true;
-        } else {
-            return false
-        }
-    
-    
-    
-    
+    if (typeof value === 'string'){
+        return false;
+    } else if (typeof value === "number"){
+      return false;
+    } else if (typeof value === "boolean"){
+      return false;
+    } else if (value instanceof Date) {
+      return false;
+    } else if (value === null) {
+      return false;
+    } else if (Array.isArray(value)){
+      return true;
+    } else {
+      return true
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -98,16 +110,25 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-   // if (value.typeof === true) {
-   //     return value.typeof
-  //  } else if () {
-
+    if (typeof value === 'string'){
+        return 'string';
+    } else if (typeof value === "number"){
+      return 'number';
+    } else if (typeof value === "boolean"){
+      return "boolean";
+    } else if (typeof value === "function"){
+      return "function";
+    } else if (value instanceof Date) {
+      return 'date';
+    } else if (value === null) {
+      return 'null';
+    } else if (Array.isArray(value)){
+      return 'array';
+    } else {
+      return 'object'
     }
-    
-    
-    
     // YOUR CODE ABOVE HERE //
-
+}
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
