@@ -49,19 +49,38 @@ function makeContactList() {
      * You need something here to hold contacts. See length api for a hint:
      */
     var contacts = [];
-    
-    return {
-        // we implemented the length api for you //
-       
+     // we implemented the length api for you //
+           
+  return {
+    length: function(){
+      return contacts.length;
+    }
+  }
+  return {addObject: function() {
+    return contacts.addObject 
+        id = id
+        nameFirst = nameFirst
+        nameLast = nameLast
+    }
     }
 }
-
-
+  return {
+    findContact: function() {
+    for (var key in contacts)
+      if (key instanceof contacts) {
+    return (contact.nameFirst + contact.nameLast)
+      }
+      }
+  }
+  return {
+    removeContact: function() {
+    return contacts.remove(contact)
+  }
 
 
 
 // YOUR CODE GOES ABOVE HERE //
-
+    }
 
 
 

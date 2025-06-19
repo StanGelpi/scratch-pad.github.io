@@ -20,13 +20,27 @@
  *  a. create something to collect the output you'll return.
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
+ * I: two intergers set as parameters to the range function
+ * O: return an array containing all the intergers between the two parameters
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+  //initialize new array to hold result
+  var newArr = [];
+  //set up low to high iteration count
+  if (start < end) {
+   for (var i = start; i <= end; i++){
+     newArr.push(i)   
+    } return newArr
+   //set up high to low iteration count   
+ } else if (start > end) {
+    for (var i = start; i >= end; i--) {
+       console.log('see')
+     newArr.push(i)
+   } return newArr
+   //console.log(newArr)
+ }
+ 
     // YOUR CODE GOES ABOVE HERE //
 }
 
