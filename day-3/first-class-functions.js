@@ -136,16 +136,20 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    for (var i = 0; i < strings.length; i++) {
-        if (strings[i] = test[i]) {
-          return true
-        } else {
-          return false
-        }
+    var newArr = []
+    //setup a for loop to iterate over the array
+        for (var i = 0; i < strings.length; i++) {
           
-    }
-    
-    
+          if (test(strings[i]) === true)
+          newArr.push(strings[i])   
+           }
+          if (newArr.length === strings.length) {
+          return true
+          } else {
+            return false
+          } 
+       
+
     // YOUR CODE ABOVE HERE //
 }
 

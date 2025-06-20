@@ -4,12 +4,18 @@
 
 /**
  * 4: Contact List // Contacts
+ * I: create a factory function 
+ * O: return contact objects
  * 
  *  a. Create a factory Function called makeContact(id, nameFirst, nameLast) 
  *     that returns a contact object.
  *     
  *          ex: makeContact(1, 'Max', 'Gaudin'); // => {id: 1, nameFirst: 'Max', nameLast: 'Gaudin'}
- *     
+ * 
+ * 
+ * I: create a factory function 
+ * O: Return an object that will manage contacts and applied with 5 methods
+ * 
  *  b. Create a factory Function called makeContactList that returns an Object 
  *     that manages contacts. The contact-list object should have the following methods:
  *       
@@ -42,45 +48,20 @@ function makeContact(id, nameFirst, nameLast) {
     }
 } 
 
-
-
-function makeContactList() {
-    /*
-     * You need something here to hold contacts. See length api for a hint:
-     */
+function makecontactlist(){
     var contacts = [];
-     // we implemented the length api for you //
-           
-  return {
-    length: function(){
-      return contacts.length;
+    return {
+        // we implemented the length api for you//
+        length:function() {
+            return contacts.length
+        },
+        
     }
-  }
-  return {addObject: function() {
-    return contacts.addObject 
-        id = id
-        nameFirst = nameFirst
-        nameLast = nameLast
-    }
-    }
+
 }
-  return {
-    findContact: function() {
-    for (var key in contacts)
-      if (key instanceof contacts) {
-    return (contact.nameFirst + contact.nameLast)
-      }
-      }
-  }
-  return {
-    removeContact: function() {
-    return contacts.remove(contact)
-  }
+       
+  
 
-
-
-// YOUR CODE GOES ABOVE HERE //
-    }
 
 
 
