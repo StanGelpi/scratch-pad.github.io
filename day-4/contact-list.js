@@ -48,14 +48,43 @@ function makeContact(id, nameFirst, nameLast) {
     }
 } 
 
-function makecontactlist(){
+function makeContactList(){
     var contacts = [];
     return {
         // we implemented the length api for you//
         length:function() {
             return contacts.length
         },
-        
+        addContact:function(contact){
+            contacts.push(contact)
+        },
+        findContact:function(fullName) {
+            
+            for (var i = 0; i < contacts.length; i++) {
+                var match = contacts[i].nameFirst + ' ' + contacts[i].nameLast;
+                    if (match === fullName) {
+                    return contacts[i];
+                    } else {
+                    return undefined;
+                    }    
+            }
+        },
+        removeContact: function(contact) {
+           if (contacts.includes(contact)) {
+            contacts.splice(contact, 1)
+           }  
+        },
+        printAllContactNames: function(){
+            for (var i = 0; i <= contacts.length - 1; i++) {
+               let fullName = contacts[i].nameFirst + ' ' + contacts[i].nameLast
+            
+                if (contacts[i] < contacts.length - 1) {
+                    console.log(fullName + '\n')
+                } else if (contacts[i] === contacts.length - 1) {
+                    console.log(fullName)
+                }
+            }    
+        }
     }
 
 }
