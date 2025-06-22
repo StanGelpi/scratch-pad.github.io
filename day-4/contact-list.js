@@ -75,15 +75,12 @@ function makeContactList(){
            }  
         },
         printAllContactNames: function(){
+            var newArr = []
             for (var i = 0; i <= contacts.length - 1; i++) {
                let fullName = contacts[i].nameFirst + ' ' + contacts[i].nameLast
-            
-                if (contacts[i] < contacts.length - 1) {
-                    console.log(fullName + '\n')
-                } else if (contacts[i] === contacts.length - 1) {
-                    console.log(fullName)
-                }
-            }    
+                git newArr.push(fullName);
+                
+            }    return newArr.join('\n')
         }
     }
 
